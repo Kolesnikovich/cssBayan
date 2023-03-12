@@ -1,2 +1,5 @@
 Kolesnikovich Kirill 
-cssBayan
+
+Task: cssBayan
+
+Deployment: https://kolesnikovich.github.io/cssBayan/cssBayan/
