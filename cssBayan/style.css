@@ -10,33 +10,42 @@ body {
 
 h1 {
     font-family: 'Inter', sans-serif;
+    align-self: flex-start;
+    font-size: 48px;
 }
 
-img{
-    width: 500px;
-    height: 500px;
+img {
+    width: 100%;
+    max-width: 500px;
+    transition: .3s;
 }
 
 .accordion-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
 }
 
 .tab {
     font-family: 'Inika', serif;
+    color: #007fa8;
+    font-size: 1.2em;
+    font-weight: 700;
+    width: 100%;
     max-width: 600px;
     cursor: pointer;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
     padding: 1em;
 }
 
-.tab:last-child{
+.tab:last-child {
     border-bottom: none;
 }
 
 .arrow {
+    opacity: 0;
     width: 0.5em;
     height: 0.5em;
     display: inline-block;
@@ -46,7 +55,12 @@ img{
     transform: rotate(-45deg);
     margin-left: 0.38em;
     margin-top: -0.25em;
-    transition: transform 100ms ease-in-out;
+    transition: transform .1s ease-in-out;
+    transition: .3s;
+}
+
+.accordion-container:hover .arrow {
+    opacity: 1;
 }
 
 .tab input {
@@ -54,15 +68,17 @@ img{
 }
 
 .tab label {
-    position: relative;
+    position: static;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     cursor: pointer;
+    transition: .1s;
 }
 
-.tab__content .meme{
+.tab__content .meme {
     display: flex;
     justify-content: center;
     padding-top: 2em;
@@ -83,7 +99,35 @@ img{
     transform: scaleY(1);
 }
 
-.tab:hover .arrow, .tab input:checked ~ label.arrow {
+.tab:hover .arrow,
+.tab input:checked~label.arrow {
     transform: rotate(-225deg);
-    margin-top: 4px;
+}
+
+.tab input:checked~label {
+    color: #000000;
+}
+
+.tab:active img {
+    filter: opacity(.5);
+}
+
+.tab:active label {
+    color: #007fa8;
+}
+
+.accordion-container:hover .tab input:checked~label {
+    color: #007fa8;
+}
+
+.accordion-container:hover .tab {
+    color: #000000;
+}
+
+.accordion-container:hover .tab input:checked~label {
+    color: #000000;
+}
+
+.accordion-container:hover .tab:active input:checked~label {
+    color: #007fa8;
 }
