@@ -1,0 +1,89 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+}
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
+.tab {
+    font-family: 'Inika', serif;
+    max-width: 600px;
+    cursor: pointer;
+    border-bottom: 1px solid #000000;
+    padding: 1em;
+}
+
+.tab:last-child{
+    border-bottom: none;
+}
+
+.arrow {
+    width: 0.5em;
+    height: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+    border-left: 0.15em solid currentColor;
+    border-bottom: 0.15em solid currentColor;
+    transform: rotate(-45deg);
+    margin-left: 0.38em;
+    margin-top: -0.25em;
+    transition: transform 100ms ease-in-out;
+}
+
+.tab input {
+    display: none;
+}
+
+.tab label {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    cursor: pointer;
+}
+
+.tab__content .meme{
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.tab .tab__content {
+    overflow: hidden;
+    max-height: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: .3s;
+}
+
+.tab label:hover~.tab__content,
+.tab__content:hover,
+.tab input:checked~.tab__content {
+    max-height: 100vh;
+    transform: scaleY(1);
+}
+
+.tab:hover .arrow, .tab input:checked ~ label.arrow {
+    transform: rotate(-225deg);
+    margin-top: 4px;
+}

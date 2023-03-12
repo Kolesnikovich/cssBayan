@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kolesnikovich's cssBayan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
-    
+    <div class="accordion-container">
+        <h1>CSS Bayan</h1>
+        <div class="tab">
+            <input type="radio" name="memes" id="tab1" checked>
+            <label for="tab1">First meme <span class="arrow"></span></label>
+            <div class="tab__content">
+                <label class="meme" for="tab1"><img src="./assets/meme1.png"></label>
+            </div>
+        </div>
+
+        <div class="tab">
+            <input type="radio" name="memes" id="tab2">
+            <label for="tab2">Second meme (my fav)<span class="arrow"></span></label>
+            <div class="tab__content">
+                <label class="meme" for="tab2"><img src="./assets/meme2.png"></label>
+            </div>
+        </div>
+
+        <div class="tab">
+            <input type="radio" name="memes" id="tab3">
+            <label for="tab3">Third meme <span class="arrow"></span></label>
+            <div class="tab__content">
+                <label class="meme" for="tab3"><img src="./assets/meme3.png"></label>
+            </div>
+        </div>
+
+        <div class="tab">
+            <input type="radio" name="memes" id="tab4">
+            <label for="tab4">Fourth meme <span class="arrow"></span></label>
+            <div class="tab__content">
+                <label class="meme" for="tab4"><img src="./assets/meme4.png"></label>
+            </div>
+        </div>
+
+        <div class="tab">
+            <input type="radio" name="memes" id="tab5">
+            <label for="tab5">Fifth meme <span class="arrow"></span></label>
+            <div class="tab__content">
+                <label class="meme" for="tab5"><img src="./assets/meme5.png"></label>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
